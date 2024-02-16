@@ -204,14 +204,14 @@ body {
 
 /* About Us */
 .about,
-.product,
+
 .produk,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
-.product h2,
+
 .produk h2,
 .contact h2 {
   text-align: center;
@@ -220,7 +220,7 @@ body {
 }
 
 .about h2 span,
-.product h2 span,
+
 .produk h2 span,
 .contact h2 span {
   color: var(--primary2);
@@ -266,7 +266,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.product p,
+
 .produk p,
 .contact p {
   text-align: center;
@@ -275,30 +275,6 @@ body {
   font-weight: 100;
   font-size: 1.2rem;
   line-height: 1.5;
-}
-
-.product .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 5rem;
-  justify-content: center;
-}
-
-.product .row .product-card {
-  text-align: center;
-  /* padding: 0 2rem; */
-  padding-bottom: 1.5rem;
-  /* margin: 4rem; */
-}
-
-.product .row .product-card-title {
-  margin-top: 0, 5rem auto 0.5rem;
-}
-
-/* untuk membuat rounded atau bulat,gambar harus persegi */
-.product .row .product-card img {
-  /* border-radius: 50%; */
-  width: 100%;
 }
 
 /* PRODUK SECTION*/
@@ -684,9 +660,6 @@ footer .credits a {
     font-size: 1.6rem;
   }
 
-  .product p {
-    font-size: 1.5rem;
-  }
 
   .contact .row {
     flex-wrap: wrap;
@@ -740,16 +713,20 @@ footer .credits a {
   }
 }
 
-/* 
+
   .modal-content {
     flex-wrap: wrap;
-  } */
+  }
 
 
 /* Mobile handphone */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
   }
 
   .contact .row2 form {

@@ -1,9 +1,30 @@
 // Toggle class aactive untuk hamburger menu
-const navbarNav = document.querySelector(".navbar-nav");
+// const navbarNav = document.querySelector(".navbar-nav");
 // Ketika Hamburger menu di klik
-document.querySelector("#hamburger-menu").onclick = () => {
-  navbarNav.classList.toggle("active");
-};
+// document.querySelector("#hamburger-menu").onclick = () => {
+//   navbarNav.classList.toggle("active");
+// };
+
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navbarNav = document.querySelector('.navbar-nav');
+
+hamburgerMenu.addEventListener('click', function(event) {
+  event.stopPropagation();
+  
+  // Toggle class 'active' pada navbar-nav untuk membuka atau menutup menu
+  navbarNav.classList.toggle('active');
+});
+
+// Tambahkan event listener untuk menutup menu saat pengguna mengklik di luar menu
+document.addEventListener('click', function(event) {
+  // Periksa apakah yang diklik bukan hamburger menu atau navbar-nav
+  if (!event.target.closest('#hamburger-menu') && !event.target.closest('.navbar-nav')) {
+    // Jika tidak, maka tutup menu dengan menghapus class 'active'
+    navbarNav.classList.remove('active');
+  }
+});
+
 
 // toggle untuk tombol search-form
 const searchForm = document.querySelector(".search-form");
@@ -31,27 +52,6 @@ document.addEventListener("click", function (e) {
 
 
 
-// ===============================
-const itemDetailModal10 = document.querySelector("#item-detail-modal10");
-const productCardImg = document.querySelectorAll(".product-card-img");
-
-
-productCardImg.forEach((img) => {
-  img.onclick = (e) => {
-    itemDetailModal10.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-// klik tombol close pada Modal
-document.querySelector("#item-detail-modal10 .close-icon").onclick = (e) => {
-  itemDetailModal10.style.display = "none";
-  e.preventDefault();
-};
-document.querySelector("#item-detail-modal10 .button-back").onclick = (e) => {
-  itemDetailModal10.style.display = "none";
-  e.preventDefault();
-};
 
 // kilk di luar modal dari pak dika
 
@@ -61,97 +61,6 @@ document.querySelector("#item-detail-modal10 .button-back").onclick = (e) => {
 //   }
 // };
 
-//product 2 
-const itemDetailModal11 = document.querySelector("#item-detail-modal11");
-const productCardImg2 = document.querySelectorAll(".product-card-img2");
-
-
-productCardImg2.forEach((img) => {
-  img.onclick = (e) => {
-    itemDetailModal11.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-// klik tombol close pada Modal
-document.querySelector("#item-detail-modal11 .close-icon").onclick = (e) => {
-  itemDetailModal11.style.display = "none";
-  e.preventDefault();
-};
-document.querySelector("#item-detail-modal11 .button-back").onclick = (e) => {
-  itemDetailModal11.style.display = "none";
-  e.preventDefault();
-};
-
-//product 3
-const itemDetailModal12 = document.querySelector("#item-detail-modal12");
-const productCardImg3 = document.querySelectorAll(".product-card-img3");
-
-
-productCardImg3.forEach((img) => {
-  img.onclick = (e) => {
-    itemDetailModal12.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-// klik tombol close pada Modal
-document.querySelector("#item-detail-modal12 .close-icon").onclick = (e) => {
-  itemDetailModal12.style.display = "none";
-  e.preventDefault();
-};
-document.querySelector("#item-detail-modal12 .button-back").onclick = (e) => {
-  itemDetailModal12.style.display = "none";
-  e.preventDefault();
-};
-
-
-//product 4
-const itemDetailModal13 = document.querySelector("#item-detail-modal13");
-const productCardImg4 = document.querySelectorAll(".product-card-img4");
-
-
-productCardImg4.forEach((img) => {
-  img.onclick = (e) => {
-    itemDetailModal13.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-// klik tombol close pada Modal
-document.querySelector("#item-detail-modal13 .close-icon").onclick = (e) => {
-  itemDetailModal13.style.display = "none";
-  e.preventDefault();
-};
-document.querySelector("#item-detail-modal13 .button-back").onclick = (e) => {
-  itemDetailModal13.style.display = "none";
-  e.preventDefault();
-};
-
-//product 5
-const itemDetailModal14 = document.querySelector("#item-detail-modal14");
-const productCardImg5 = document.querySelectorAll(".product-card-img5");
-
-
-productCardImg5.forEach((img) => {
-  img.onclick = (e) => {
-    itemDetailModal14.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-// klik tombol close pada Modal
-document.querySelector("#item-detail-modal14 .close-icon").onclick = (e) => {
-  itemDetailModal14.style.display = "none";
-  e.preventDefault();
-};
-document.querySelector("#item-detail-modal14 .button-back").onclick = (e) => {
-  itemDetailModal14.style.display = "none";
-  e.preventDefault();
-};
-
-
-// ===============================
 
 // Modal Box
 const itemDetailModal = document.querySelector("#item-detail-modal");
@@ -185,34 +94,19 @@ document.querySelector("#item-detail-modal .button-back").onclick = (e) => {
 
 // klik di luar modal berlaku semua modal
 window.onclick = (e) => {
-  if (e.target === itemDetailModal10 && itemDetailModal10.style.display === "flex") {
-    itemDetailModal10.style.display = "none";
-  }
-  if (e.target === itemDetailModal11 && itemDetailModal11.style.display === "flex") {
-    itemDetailModal11.style.display = "none";
-  }
-  if (e.target === itemDetailModal12 && itemDetailModal12.style.display === "flex") {
-    itemDetailModal12.style.display = "none";
-  }
-  if (e.target === itemDetailModal13 && itemDetailModal13.style.display === "flex") {
-    itemDetailModal13.style.display = "none";
-  }
-  if (e.target === itemDetailModal14 && itemDetailModal14.style.display === "flex") {
-    itemDetailModal14.style.display = "none";
-  }
-  if (e.target === itemDetailModal && itemDetailModal.style.display === "flex") {
+  if (e.target === itemDetailModal .style.display === "flex") {
     itemDetailModal.style.display = "none";
   }
-  if (e.target === itemDetailModal2 && itemDetailModal2.style.display === "flex") {
+  if (e.target === itemDetailModal2 .style.display === "flex") {
     itemDetailModal2.style.display = "none";
   }
-  if (e.target === itemDetailModal3 && itemDetailModal3.style.display === "flex") {
+  if (e.target === itemDetailModal3.style.display === "flex") {
     itemDetailModal3.style.display = "none";
   }
-  if (e.target === itemDetailModal4 && itemDetailModal4.style.display === "flex") {
+  if (e.target === itemDetailModal4.style.display === "flex") {
     itemDetailModal4.style.display = "none";
   }
-  if (e.target === itemDetailModal5 && itemDetailModal5.style.display === "flex") {
+  if (e.target === itemDetailModal5.style.display === "flex") {
     itemDetailModal5.style.display = "none";
   }
 };
