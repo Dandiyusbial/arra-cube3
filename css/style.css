@@ -695,6 +695,11 @@ footer .credits a {
     /* Atur padding sesuai kebutuhan */
   }
 
+  .modal-content{
+       flex-wrap: wrap;
+  }
+
+  /* keunggulan */
   .row3 {
     display: flex;
     justify-content: space-around;
@@ -714,10 +719,8 @@ footer .credits a {
     margin: 5px 10px;
     /* Margin untuk jarak antar item */
   }
+/* end keunggulan */
 
-  .modal-content {
-    display: flex;
-  }
 }
 
 
