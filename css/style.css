@@ -714,12 +714,14 @@ footer .credits a {
     margin: 5px 10px;
     /* Margin untuk jarak antar item */
   }
+
+  .modal-content {
+    display: flex;
+  }
 }
 
 
-.modal-content {
-  display: flex;
-}
+
 
 
 /* Mobile handphone */
