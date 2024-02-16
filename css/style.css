@@ -695,9 +695,6 @@ footer .credits a {
     /* Atur padding sesuai kebutuhan */
   }
 
-  .modal-content{
-       flex-wrap: wrap;
-  }
 
   /* keunggulan */
   .row3 {
@@ -720,6 +717,30 @@ footer .credits a {
     /* Margin untuk jarak antar item */
   }
 /* end keunggulan */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0rem;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+  background-color: #b3b3b3;
+  color: var(--bg);
+  /* margin: 15% auto; */
+  /* padding: 1.2rem; */
+  border: 1px solid var(--primary2);
+  width: 70%;
+  height: 30%;
+  animation: animateModal 0.5s;
+}
+
 
 }
 
