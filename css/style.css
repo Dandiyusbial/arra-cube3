@@ -578,7 +578,7 @@ footer .credits a {
 /* Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 75%;
   }
 
   .contact .row2 .map2 {
@@ -599,6 +599,9 @@ footer .credits a {
   }
 
   /* start setelah hamburger menu muncul, home DLL di modifikasi*/
+  .navbar{
+    position: absolute;
+  }
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -635,11 +638,11 @@ footer .credits a {
     right: 2rem;
   }
 
-.about h2,
-.produk h2,
-.contact h2 {
-  padding-top: 2rem;
-}
+  .about h2,
+  .produk h2,
+  .contact h2 {
+    padding-top: 2rem;
+  }
 
   .about .row {
     flex-wrap: wrap;
@@ -714,19 +717,15 @@ footer .credits a {
 }
 
 
-  .modal-content {
-    flex-wrap: wrap;
-  }
+.modal-content {
+  display: flex;
+}
 
 
 /* Mobile handphone */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
-  }
-
-  #hamburger-menu {
-    display: inline-block;
   }
 
   .contact .row2 form {
